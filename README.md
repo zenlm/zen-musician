@@ -128,7 +128,7 @@ python infer.py \
 ---
  
 ## Prompt Engineering Guide
-The prompt consists of two parts: genre tags and lyrics.
+The prompt consists of two parts: genre tags, lyrics, and ref audio.
 
 ### Genre Tagging Prompt
 1. An example genre tagging prompt can be found [here](inference/prompt_examples/genre.txt).
@@ -154,6 +154,8 @@ The prompt consists of two parts: genre tags and lyrics.
 
 
 ### Audio Prompt
+1. Audio prompt is optional. Providing ref audio for ICL usually increase the good case rate, and result in less diversity since the generated token space is bounded by the ref audio. CoT only (no ref) will result in a more diverse output.
+
 1. We find that dual-track ICL mode gives the best musicality and prompt following. We will support this mode soon.
 
 2. Use the chorus part of the music as prompt will result in better musicality.
