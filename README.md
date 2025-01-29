@@ -25,7 +25,7 @@ YuE is a groundbreaking series of open-source foundation models designed for mus
 
 <br>
 
-
+---
 
 ## Hardware and Performance
 
