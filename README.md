@@ -137,7 +137,7 @@ python infer.py \
 ---
  
 ## Prompt Engineering Guide
-The prompt consists of two parts: genre tags, lyrics, and ref audio.
+The prompt consists of three parts: genre tags, lyrics, and ref audio.
 
 ### Genre Tagging Prompt
 1. An example genre tagging prompt can be found [here](inference/prompt_examples/genre.txt).
