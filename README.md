@@ -56,7 +56,8 @@ conda activate yue
 conda install pytorch torchvision torchaudio cudatoolkit=11.8 -c pytorch -c nvidia
 pip install -r requirements.txt
 
-# For saving GPU memory, FlashAttention 2 is mandatory. Without it, large sequence lengths will lead to out-of-memory (OOM) errors, especially on GPUs with limited memory.
+# For saving GPU memory, FlashAttention 2 is mandatory. 
+# Without it, long audio may lead to out-of-memory (OOM) errors.
 # Be careful about matching the cuda version and flash-attn version
 pip install flash-attn --no-build-isolation
 ```
