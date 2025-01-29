@@ -70,7 +70,7 @@ To customize the number of sessions, the interface allows you to specify the des
 ---
 
 ## Quickstart
-Thanks to Fahd for creating a tutorial on how to quickly get started with YuE. Here is his [demonstration](https://www.youtube.com/watch?v=RSMNH9GitbA).
+Video tutorial by Fahd [here](https://www.youtube.com/watch?v=RSMNH9GitbA).
 
 ```
 # Make sure you have git-lfs installed (https://git-lfs.com)
