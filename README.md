@@ -26,6 +26,14 @@ YuE is a groundbreaking series of open-source foundation models designed for mus
 <br>
 
 ---
+## TODOs
+- [ ] Support dual-track ICL mode.
+- [ ] Support gradio interface.
+- [ ] Support transformers tensor parallel.
+- [ ] Online serving on huggingface space.
+- [ ] Example finetune code for enabling BPM control using 🤗 Transformers.
+
+---
 
 ## Hardware and Performance
 
