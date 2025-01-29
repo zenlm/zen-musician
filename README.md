@@ -144,13 +144,15 @@ The prompt consists of two parts: genre tags, lyrics, and ref audio.
 ### Lyrics Prompt
 1. An example lyric prompt can be found [here](inference/prompt_examples/lyrics.txt).
 
-2. The lyrics prompt should be divided into sessions, with structure labels (e.g., [verse], [chorus], [bridge], [outro]) prepended. Each session should be separated by 2 newline character "\n\n".
+2. Languages supported: not limited to English, Chinese (Mandarin, Cantonese), Japanese, and Korean. See [issue 12](https://github.com/multimodal-art-projection/YuE/issues/12#issuecomment-2620845772), we reveal the top languages distribution of annealing phase.
 
-3. **DONOT** put too many words in a single segment, since each session is around 30s (`--max_new_tokens 3000` by default).
+3. The lyrics prompt should be divided into sessions, with structure labels (e.g., [verse], [chorus], [bridge], [outro]) prepended. Each session should be separated by 2 newline character "\n\n".
 
-4. We find that [intro] label is less stable, so we recommend starting with [verse] or [chorus].
+4. **DONOT** put too many words in a single segment, since each session is around 30s (`--max_new_tokens 3000` by default).
 
-5. For generating music with no vocal, see [issue 18](https://github.com/multimodal-art-projection/YuE/issues/18).
+5. We find that [intro] label is less stable, so we recommend starting with [verse] or [chorus].
+
+6. For generating music with no vocal, see [issue 18](https://github.com/multimodal-art-projection/YuE/issues/18).
 
 
 ### Audio Prompt
