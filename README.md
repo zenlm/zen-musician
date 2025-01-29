@@ -109,6 +109,8 @@ python infer.py \
 If you want to use music in-context-learning (provide a reference song), enable `--use_audio_prompt`, `--prompt_start_time`, and `--prompt_end_time` to specify the audio segment. 
 
 Note: 
+- ICL requires a different ckpt, e.g. `m-a-p/YuE-s1-7B-anneal-en-icl`.
+
 - Music ICL generally requires a 30s audio segment. The model will write new songs with similiar style of the provided audio, and may improve musicality.
 
 - We have 4 modes for ICL: mix, vocal, instrumental, and dual-track. 
@@ -153,7 +155,7 @@ The prompt consists of three parts: genre tags, lyrics, and ref audio.
 ### Lyrics Prompt
 1. An example lyric prompt can be found [here](inference/prompt_examples/lyrics.txt).
 
-2. Languages supported: not limited to English, Chinese (Mandarin, Cantonese), Japanese, and Korean. See [issue 12](https://github.com/multimodal-art-projection/YuE/issues/12#issuecomment-2620845772), we reveal the top languages distribution of annealing phase.
+2. We support multiple languages, including but not limited to English, Mandarin Chinese, Cantonese, Japanese, and Korean. The default top language distribution during the annealing phase is revealed in [issue 12](https://github.com/multimodal-art-projection/YuE/issues/12#issuecomment-2620845772). A language ID on a specific annealing checkpoint indicates that we have adjusted the mixing ratio to enhance support for that language.
 
 3. The lyrics prompt should be divided into sessions, with structure labels (e.g., [verse], [chorus], [bridge], [outro]) prepended. Each session should be separated by 2 newline character "\n\n".
 
