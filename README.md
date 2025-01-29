@@ -188,7 +188,7 @@ The prompt consists of three parts: genre tags, lyrics, and ref audio.
 
 ## Acknowledgements
 The project is co-lead by HKUST and M-A-P (alphabetic order). Also thanks moonshot.ai, bytedance, 01.ai, and geely for supporting the project.
-A friendly link to HKUST Audio group's [huggingface space](https://huggingface.co/HKUSTAudio) lead by Prof. Wei Xue. 
+A friendly link to HKUST Audio group's [huggingface space](https://huggingface.co/HKUSTAudio). 
 
 We deeply appreciate all the support we received along the way. Long live open-source AI!
 
