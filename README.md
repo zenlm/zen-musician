@@ -26,7 +26,7 @@ YuE is a groundbreaking series of open-source foundation models designed for mus
 <br>
 
 ---
-## TODOs
+## TODOs📋
 - [ ] Support dual-track ICL mode.
 - [ ] Fix "instrumental" naming bug in output files. https://github.com/multimodal-art-projection/YuE/pull/26
 - [ ] Support gradio interface. https://github.com/multimodal-art-projection/YuE/issues/1
