@@ -29,6 +29,7 @@ YuE is a groundbreaking series of open-source foundation models designed for mus
 ## TODOs
 [!["Buy Us A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://buymeacoffee.com/ruibin)
 - [ ] Support dual-track ICL mode.
+- [ ] Fix "instrumental" naming bug in output files. https://github.com/multimodal-art-projection/YuE/pull/26
 - [ ] Support gradio interface. https://github.com/multimodal-art-projection/YuE/issues/1
 - [ ] Support transformers tensor parallel. https://github.com/multimodal-art-projection/YuE/issues/7
 - [ ] Online serving on huggingface space.
