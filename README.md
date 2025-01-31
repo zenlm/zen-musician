@@ -67,7 +67,7 @@ conda create -n yue python=3.8 # Python >=3.8 is recommended.
 conda activate yue
 # install cuda >= 11.8
 conda install pytorch torchvision torchaudio cudatoolkit=11.8 -c pytorch -c nvidia
-pip install -r requirements.txt
+pip install -r <(curl -sSL https://raw.githubusercontent.com/multimodal-art-projection/YuE/main/requirements.txt)
 
 # For saving GPU memory, FlashAttention 2 is mandatory. 
 # Without it, long audio may lead to out-of-memory (OOM) errors.
@@ -78,6 +78,9 @@ pip install flash-attn --no-build-isolation
 ### 2. Download the infer code and tokenizer
 ```bash
 # Make sure you have git-lfs installed (https://git-lfs.com)
+# if you don't have root, see https://github.com/git-lfs/git-lfs/issues/4134#issuecomment-1635204943
+sudo apt update
+sudo apt install git-lfs
 git lfs install
 git clone https://github.com/multimodal-art-projection/YuE.git
 
@@ -102,8 +105,8 @@ cd YuE/inference/
 python infer.py \
     --stage1_model m-a-p/YuE-s1-7B-anneal-en-cot \
     --stage2_model m-a-p/YuE-s2-1B-general \
-    --genre_txt genre.txt \
-    --lyrics_txt lyrics.txt \
+    --genre_txt ../genre.txt \
+    --lyrics_txt ../lyrics.txt \
     --run_n_segments 2 \
     --stage2_batch_size 4 \
     --output_dir ./output \
@@ -130,8 +133,8 @@ cd YuE/inference/
 python infer.py \
     --stage1_model m-a-p/YuE-s1-7B-anneal-en-icl \
     --stage2_model m-a-p/YuE-s2-1B-general \
-    --genre_txt genre.txt \
-    --lyrics_txt lyrics.txt \
+    --genre_txt ../genre.txt \
+    --lyrics_txt ../lyrics.txt \
     --run_n_segments 2 \
     --stage2_batch_size 4 \
     --output_dir ./output \
