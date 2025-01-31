@@ -96,6 +96,8 @@ Note:
 
 - You may customize the prompt in `genre.txt` and `lyrics.txt`. See prompt engineering guide [here](#prompt-engineering-guide).
 
+- You can increase `--stage2_batch_size` to speed up the inference, but be careful for OOM.
+
 - LM ckpts will be automatically downloaded from huggingface. 
 
 
