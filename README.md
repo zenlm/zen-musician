@@ -19,7 +19,7 @@ YuE is a groundbreaking series of open-source foundation models designed for mus
 
 ## News and Updates
 
-* **2025.01.30 🧑🏻‍💻 Inference Update**: 1. Support dual-track ICL mode. 2. Fix "instrumental" naming bug in output files. 3. Support seeding. 
+* **2025.01.30 🔥 Inference Update**: We now support dual-track ICL mode. You can try to prompt the model with a ref song.
 
 * **2025.01.30 🔥 Announcement: A New Era Under Apache 2.0 🔥**: We are thrilled to announce that, in response to overwhelming requests from our community, **YuE** is now officially licensed under the **Apache 2.0** license. We sincerely hope this marks a watershed moment—akin to what Stable Diffusion and LLaMA have achieved in their respective fields—for music generation and creative AI. 🎉🎉🎉
 
@@ -36,6 +36,9 @@ YuE is a groundbreaking series of open-source foundation models designed for mus
 - [ ] Online serving on huggingface space.
 - [ ] Example finetune code for enabling BPM control using 🤗 Transformers.
 - [ ] Support stemgen mode https://github.com/multimodal-art-projection/YuE/issues/21
+- [x] Support dual-track ICL mode.
+- [x] Fix "instrumental" naming bug in output files. https://github.com/multimodal-art-projection/YuE/pull/26
+- [x] Support seeding https://github.com/multimodal-art-projection/YuE/issues/20
 
 ---
 
@@ -116,19 +119,25 @@ python infer.py \
     --seed 42 
 ```
 
-If you want to use music in-context-learning (provide a reference song), enable `--use_audio_prompt`, `--prompt_start_time`, and `--prompt_end_time` to specify the audio segment. 
+We also support music in-context-learning (provide a reference song), there are 2 types: single-track (mix/vocal/instrumental) and dual-track. 
 
 Note: 
 - ICL requires a different ckpt, e.g. `m-a-p/YuE-s1-7B-anneal-en-icl`.
 
 - Music ICL generally requires a 30s audio segment. The model will write new songs with similar style of the provided audio, and may improve musicality.
 
-- We have 4 modes for ICL: mix, vocal, instrumental, and dual-track. 
+- Dual-track ICL works better in general, requiring both vocal and instrumental tracks.
 
-To turn on mix, vocal or instrumental mode, enable `--use_audio_prompt`, and provide `--audio_prompt_path` , `--prompt_start_time`, and `--prompt_end_time`. 
-For example:
+- For single-track ICL, you can provide a mix, vocal, or instrumental track.
+
+- You can separate the vocal and instrumental tracks using [python-audio-separator](https://github.com/nomadkaraoke/python-audio-separator) or [Ultimate Vocal Remover GUI](https://github.com/Anjok07/ultimatevocalremovergui).
+
 ```bash
-# This is the ICL mode. Currently only mix-ICL is supported.
+# This is the dual-track ICL mode.
+# To turn on dual-track mode, enable `--use_dual_tracks_prompt`
+# and provide `--vocal_track_prompt_path`, `--instrumental_track_prompt_path`, 
+# `--prompt_start_time`, and `--prompt_end_time`
+# The ref audio is taken from GTZAN test set.
 cd YuE/inference/
 python infer.py \
     --stage1_model m-a-p/YuE-s1-7B-anneal-en-icl \
@@ -142,16 +151,18 @@ python infer.py \
     --max_new_tokens 3000 \
     --seed 42 \
     --use_dual_tracks_prompt \
-    --vocal_track_prompt_path ./prompt_examples/pop.00001.Vocals.mp3 \
-    --instrumental_track_prompt_path ./prompt_examples/pop.00001.Instrumental.mp3 \
+    --vocal_track_prompt_path ../pop.00001.Vocals.mp3 \
+    --instrumental_track_prompt_path ../pop.00001.Instrumental.mp3 \
     --prompt_start_time 0 \
     --prompt_end_time 30 
 ```
 
-To turn on mix mode, vocal or instrumental mode, enable `--use_dual_tracks_prompt`, and provide `--vocal_track_prompt_path`, `--instrumental_track_prompt_path`, `--prompt_start_time`, and `--prompt_end_time`. 
-For example:
 ```bash
-# This is the ICL mode. Currently only mix-ICL is supported.
+# This is the single-track (mix/vocal/instrumental) ICL mode.
+# To turn on single-track ICL, enable `--use_audio_prompt`, 
+# and provide `--audio_prompt_path` , `--prompt_start_time`, and `--prompt_end_time`. 
+# The ref audio is taken from GTZAN test set.
+For example:
 cd YuE/inference/
 python infer.py \
     --stage1_model m-a-p/YuE-s1-7B-anneal-en-icl \
@@ -165,7 +176,7 @@ python infer.py \
     --max_new_tokens 3000 \
     --seed 42 \
     --use_audio_prompt \
-    --audio_prompt_path ./prompt_examples/pop.00001.mp3 \
+    --audio_prompt_path ../pop.00001.mp3 \
     --prompt_start_time 0 \
     --prompt_end_time 30 
 ```
@@ -203,9 +214,11 @@ The prompt consists of three parts: genre tags, lyrics, and ref audio.
 
 1. Audio prompt is optional. Providing ref audio for ICL usually increase the good case rate, and result in less diversity since the generated token space is bounded by the ref audio. CoT only (no ref) will result in a more diverse output.
 
-2. We find that dual-track ICL mode gives the best musicality and prompt following. We will support this mode soon.
+2. We find that dual-track ICL mode gives the best musicality and prompt following. 
 
 3. Use the chorus part of the music as prompt will result in better musicality.
+
+4. Around 30s audio is recommended for ICL.
 
 ---
 
