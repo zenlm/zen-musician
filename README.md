@@ -162,7 +162,6 @@ python infer.py \
 # To turn on single-track ICL, enable `--use_audio_prompt`, 
 # and provide `--audio_prompt_path` , `--prompt_start_time`, and `--prompt_end_time`. 
 # The ref audio is taken from GTZAN test set.
-For example:
 cd YuE/inference/
 python infer.py \
     --stage1_model m-a-p/YuE-s1-7B-anneal-en-icl \
