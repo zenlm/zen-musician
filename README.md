@@ -149,7 +149,6 @@ python infer.py \
     --output_dir ../output \
     --max_new_tokens 3000 \
     --use_dual_tracks_prompt \
-    --seed 0 \
     --vocal_track_prompt_path ../prompt_egs/pop.00001.Vocals.mp3 \
     --instrumental_track_prompt_path ../prompt_egs/pop.00001.Instrumental.mp3 \
     --prompt_start_time 0 \
