@@ -112,11 +112,10 @@ python infer.py \
     --genre_txt ../genre.txt \
     --lyrics_txt ../lyrics.txt \
     --run_n_segments 2 \
-    --stage2_batch_size 4 \
+    --stage2_batch_size 16 \
     --output_dir ./output \
     --cuda_idx 0 \
     --max_new_tokens 3000 \
-    --seed 42 
 ```
 
 We also support music in-context-learning (provide a reference song), there are 2 types: single-track (mix/vocal/instrumental) and dual-track. 
@@ -145,11 +144,10 @@ python infer.py \
     --genre_txt ../genre.txt \
     --lyrics_txt ../lyrics.txt \
     --run_n_segments 2 \
-    --stage2_batch_size 4 \
+    --stage2_batch_size 16 \
     --output_dir ./output \
     --cuda_idx 0 \
     --max_new_tokens 3000 \
-    --seed 42 \
     --use_dual_tracks_prompt \
     --vocal_track_prompt_path ../pop.00001.Vocals.mp3 \
     --instrumental_track_prompt_path ../pop.00001.Instrumental.mp3 \
@@ -170,11 +168,10 @@ python infer.py \
     --genre_txt ../genre.txt \
     --lyrics_txt ../lyrics.txt \
     --run_n_segments 2 \
-    --stage2_batch_size 4 \
+    --stage2_batch_size 16 \
     --output_dir ./output \
     --cuda_idx 0 \
     --max_new_tokens 3000 \
-    --seed 42 \
     --use_audio_prompt \
     --audio_prompt_path ../pop.00001.mp3 \
     --prompt_start_time 0 \
