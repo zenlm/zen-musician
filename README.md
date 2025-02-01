@@ -107,15 +107,15 @@ Note:
 # This is the CoT mode.
 cd YuE/inference/
 python infer.py \
+    --cuda_idx 0 \
     --stage1_model m-a-p/YuE-s1-7B-anneal-en-cot \
     --stage2_model m-a-p/YuE-s2-1B-general \
-    --genre_txt ../genre.txt \
-    --lyrics_txt ../lyrics.txt \
+    --genre_txt ../prompt_egs/genre.txt \
+    --lyrics_txt ../prompt_egs/lyrics.txt \
     --run_n_segments 2 \
-    --stage2_batch_size 4 \
-    --output_dir ./output \
-    --cuda_idx 0 \
-    --max_new_tokens 3000 \
+    --stage2_batch_size 16 \
+    --output_dir ../output \
+    --max_new_tokens 3000
 ```
 
 We also support music in-context-learning (provide a reference song), there are 2 types: single-track (mix/vocal/instrumental) and dual-track. 
@@ -139,18 +139,19 @@ Note:
 # The ref audio is taken from GTZAN test set.
 cd YuE/inference/
 python infer.py \
+    --cuda_idx 0 \
     --stage1_model m-a-p/YuE-s1-7B-anneal-en-icl \
     --stage2_model m-a-p/YuE-s2-1B-general \
-    --genre_txt ../genre.txt \
-    --lyrics_txt ../lyrics.txt \
+    --genre_txt ../prompt_egs/genre.txt \
+    --lyrics_txt ../prompt_egs/lyrics.txt \
     --run_n_segments 2 \
-    --stage2_batch_size 4 \
-    --output_dir ./output \
-    --cuda_idx 0 \
+    --stage2_batch_size 16 \
+    --output_dir ../output \
     --max_new_tokens 3000 \
     --use_dual_tracks_prompt \
-    --vocal_track_prompt_path ../pop.00001.Vocals.mp3 \
-    --instrumental_track_prompt_path ../pop.00001.Instrumental.mp3 \
+    --seed 0 \
+    --vocal_track_prompt_path ../prompt_egs/pop.00001.Vocals.mp3 \
+    --instrumental_track_prompt_path ../prompt_egs/pop.00001.Instrumental.mp3 \
     --prompt_start_time 0 \
     --prompt_end_time 30 
 ```
@@ -162,17 +163,17 @@ python infer.py \
 # The ref audio is taken from GTZAN test set.
 cd YuE/inference/
 python infer.py \
+    --cuda_idx 0 \
     --stage1_model m-a-p/YuE-s1-7B-anneal-en-icl \
     --stage2_model m-a-p/YuE-s2-1B-general \
-    --genre_txt ../genre.txt \
-    --lyrics_txt ../lyrics.txt \
+    --genre_txt ../prompt_egs/genre.txt \
+    --lyrics_txt ../prompt_egs/lyrics.txt \
     --run_n_segments 2 \
     --stage2_batch_size 4 \
-    --output_dir ./output \
-    --cuda_idx 0 \
+    --output_dir ../output \
     --max_new_tokens 3000 \
     --use_audio_prompt \
-    --audio_prompt_path ../pop.00001.mp3 \
+    --audio_prompt_path ../prompt_egs/pop.00001.mp3 \
     --prompt_start_time 0 \
     --prompt_end_time 30 
 ```
@@ -182,7 +183,7 @@ python infer.py \
 The prompt consists of three parts: genre tags, lyrics, and ref audio.
 
 ### Genre Tagging Prompt
-1. An example genre tagging prompt can be found [here](inference/prompt_examples/genre.txt).
+1. An example genre tagging prompt can be found [here](prompt_egs/genre.txt).
 
 2. A stable tagging prompt usually consists of five components: genre, instrument, mood, gender, and timbre. All five should be included if possible, separated by space (space delimiter).
 
@@ -193,7 +194,7 @@ The prompt consists of three parts: genre tags, lyrics, and ref audio.
 4. Additionally, we have introduced the "Mandarin" and "Cantonese" tags to distinguish between Mandarin and Cantonese, as their lyrics often share similarities.
 
 ### Lyrics Prompt
-1. An example lyric prompt can be found [here](inference/prompt_examples/lyrics.txt).
+1. An example lyric prompt can be found [here](prompt_egs/lyrics.txt).
 
 2. We support multiple languages, including but not limited to English, Mandarin Chinese, Cantonese, Japanese, and Korean. The default top language distribution during the annealing phase is revealed in [issue 12](https://github.com/multimodal-art-projection/YuE/issues/12#issuecomment-2620845772). A language ID on a specific annealing checkpoint indicates that we have adjusted the mixing ratio to enhance support for that language.
 
