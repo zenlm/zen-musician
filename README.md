@@ -19,7 +19,7 @@ YuE is a groundbreaking series of open-source foundation models designed for mus
 
 ## News and Updates
 
-* **2025.01.30 🔥 Inference Update**: We now support dual-track ICL mode. You can try to prompt the model with a ref song.
+* **2025.01.30 🔥 Inference Update**: We now support dual-track ICL mode! You can prompt the model with a reference song, and it will generate a new song in a similar style. Try it out!
 
 * **2025.01.30 🔥 Announcement: A New Era Under Apache 2.0 🔥**: We are thrilled to announce that, in response to overwhelming requests from our community, **YuE** is now officially licensed under the **Apache 2.0** license. We sincerely hope this marks a watershed moment—akin to what Stable Diffusion and LLaMA have achieved in their respective fields—for music generation and creative AI. 🎉🎉🎉
 
