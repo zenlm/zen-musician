@@ -47,7 +47,7 @@ YuE is a groundbreaking series of open-source foundation models designed for mus
 
 ### **GPU Memory**
 YuE requires significant GPU memory for generating long sequences. Below are the recommended configurations:
-- **For GPUs with 24GB memory or less**: Run **up to 2 sessions** concurrently to avoid out-of-memory (OOM) errors. Thanks to the community, there are [YuE-exllamav2](https://github.com/sgsdxzy/YuE-exllamav2) and [YuEGP](https://github.com/deepbeepmeep/YuEGP) for those with limited GPU resources. [YuE-exllamav2](https://github.com/sgsdxzy/YuE-exllamav2) can speed up generation and still produce coherent output, but may result in a loss of musicality.
+- **For GPUs with 24GB memory or less**: Run **up to 2 sessions** concurrently to avoid out-of-memory (OOM) errors. Thanks to the community, there are [YuE-exllamav2](https://github.com/sgsdxzy/YuE-exllamav2) and [YuEGP](https://github.com/deepbeepmeep/YuEGP) for those with limited GPU resources. Both can accelerate generation while maintaining coherence, but they may compromise musicality.
 - **For full song generation** (many sessions, e.g., 4 or more): Use **GPUs with at least 80GB memory**. i.e. H800, A100, or multiple RTX4090s with tensor parallel.
 
 To customize the number of sessions, the interface allows you to specify the desired session count. By default, the model runs **2 sessions** (1 verse + 1 chorus) to avoid OOM issue.
