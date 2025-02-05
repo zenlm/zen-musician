@@ -31,7 +31,6 @@ YuE is a groundbreaking series of open-source foundation models designed for mus
 
 ---
 ## TODOs📋
-- [ ] Allow `--rp` to customize repetition penalty. https://github.com/multimodal-art-projection/YuE/issues/45
 - [ ] Example finetune code for enabling BPM control using 🤗 Transformers.
 - [ ] Support stemgen mode https://github.com/multimodal-art-projection/YuE/issues/21
 - [ ] Support Colab https://github.com/multimodal-art-projection/YuE/issues/50
@@ -42,6 +41,7 @@ YuE is a groundbreaking series of open-source foundation models designed for mus
 - [x] Support dual-track ICL mode.
 - [x] Fix "instrumental" naming bug in output files. https://github.com/multimodal-art-projection/YuE/pull/26
 - [x] Support seeding https://github.com/multimodal-art-projection/YuE/issues/20
+- [x] Allow `--repetition_penalty` to customize repetition penalty. https://github.com/multimodal-art-projection/YuE/issues/45
 
 ---
 
