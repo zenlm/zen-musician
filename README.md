@@ -66,7 +66,7 @@ On an **RTX 4090 GPU**, generating 30s audio takes approximately **360 seconds**
 Quick start **VIDEO TUTORIAL** by Fahd: [Link here](https://www.youtube.com/watch?v=RSMNH9GitbA). We recommend watching this video if you are not familiar with machine learning or the command line.
 
 If you want to use **Gradio Interface** with **Docker**, see [YuE-Interface](https://github.com/alisson-anjos/YuE-Interface).
-For **Windows Users**, see [YuE-for-windows](https://github.com/sdbds/YuE-for-windows).
+For **Windows Users**, use [pinokio](https://pinokio.computer), or see [YuE-for-windows](https://github.com/sdbds/YuE-for-windows).
 
 ### 1. Install environment and dependencies
 Make sure properly install flash attention 2 to reduce VRAM usage. 
