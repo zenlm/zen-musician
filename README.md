@@ -72,8 +72,8 @@ For a **quick start**, watch this **video tutorial** by Fahd: [Watch here](https
 If you're new to **machine learning** or the **command line**, we highly recommend watching this video first.  
 
 To use a **GUI/Gradio** interface, check out:  
-- [YuEGP](https://github.com/deepbeepmeep/YuEGP)  
-- [YuE-exllamav2](https://github.com/sgsdxzy/YuE-exllamav2)  
+- [YuE-exllamav2-UI](https://github.com/WrongProtocol/YuE-exllamav2-UI)
+- [YuEGP](https://github.com/deepbeepmeep/YuEGP)
 - [YuE-Interface](https://github.com/alisson-anjos/YuE-Interface)  
 
 ### 1. Install environment and dependencies
