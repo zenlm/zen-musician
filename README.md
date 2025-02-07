@@ -67,7 +67,7 @@ On an **RTX 4090 GPU**, generating 30s audio takes approximately **360 seconds**
 - For a **one-click installer**, use [Pinokio](https://pinokio.computer).  
 - To use **Gradio with Docker**, see: [YuE-for-Windows](https://github.com/sdbds/YuE-for-windows)
 
-## 🐧 Linux Users Quickstart
+## 🐧 Linux/WSL Users Quickstart
 For a **quick start**, watch this **video tutorial** by Fahd: [Watch here](https://www.youtube.com/watch?v=RSMNH9GitbA).  
 If you're new to **machine learning** or the **command line**, we highly recommend watching this video first.  
 
