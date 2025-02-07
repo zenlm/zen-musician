@@ -18,6 +18,7 @@ Our model's name is **YuE (乐)**. In Chinese, the word means "music" and "happi
 YuE is a groundbreaking series of open-source foundation models designed for music generation, specifically for transforming lyrics into full songs (lyrics2song). It can generate a complete song, lasting several minutes, that includes both a catchy vocal track and accompaniment track. YuE is capable of modeling diverse genres/languages/vocal techniques. Please visit the [**Demo Page**](https://map-yue.github.io/) for amazing vocal performance.
 
 ## News and Updates
+* **2025.02.07 🎉 ** Get YuE for Windows on [pinokio](https://pinokio.computer).
 * **2025.02.06** Join Us on Discord! [![Discord](https://img.shields.io/discord/842440537755353128?color=%237289da&logo=discord)](https://discord.gg/ssAyWMnMzu)
 
 * **2025.01.30 🔥 Inference Update**: We now support dual-track ICL mode! You can prompt the model with a reference song, and it will generate a new song in a similar style (voice cloning [demo by @abrakjamson](https://x.com/abrakjamson/status/1885932885406093538), music style transfer [demo by @cocktailpeanut](https://x.com/cocktailpeanut/status/1886456240156348674), etc.). Try it out! 🔥🔥🔥 P.S. Be sure to check out the demos first—they're truly impressive. 
