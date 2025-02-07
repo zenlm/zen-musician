@@ -36,9 +36,9 @@ YuE is a groundbreaking series of open-source foundation models designed for mus
 - [ ] Support stemgen mode https://github.com/multimodal-art-projection/YuE/issues/21
 - [ ] Support Colab https://github.com/multimodal-art-projection/YuE/issues/50
 - [ ] Support llama.cpp https://github.com/ggerganov/llama.cpp/issues/11467
-- [ ] Support gradio interface. https://github.com/multimodal-art-projection/YuE/issues/1
 - [ ] Online serving on huggingface space.
 - [ ] Support transformers tensor parallel. https://github.com/multimodal-art-projection/YuE/issues/7
+- [x] Support gradio interface. https://github.com/multimodal-art-projection/YuE/issues/1
 - [x] Support dual-track ICL mode.
 - [x] Fix "instrumental" naming bug in output files. https://github.com/multimodal-art-projection/YuE/pull/26
 - [x] Support seeding https://github.com/multimodal-art-projection/YuE/issues/20
