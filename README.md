@@ -64,13 +64,18 @@ On an **RTX 4090 GPU**, generating 30s audio takes approximately **360 seconds**
 ---
 
 ## Quickstart
-**Linux Users:** 
+### 🐧 Linux Users  
+For a **quick start**, watch this **video tutorial** by Fahd: [Watch here](https://www.youtube.com/watch?v=RSMNH9GitbA).  
+If you're new to **machine learning** or the **command line**, we highly recommend watching this video first.  
 
-Quick start **VIDEO TUTORIAL** by Fahd: [Link here](https://www.youtube.com/watch?v=RSMNH9GitbA). We recommend watching this video if you are not familiar with machine learning or the command line. If you want to use **GUI/Gradio**, see [YuEGP](https://github.com/deepbeepmeep/YuEGP), [YuE-exllamav2](https://github.com/sgsdxzy/YuE-exllamav2), and [YuE-Interface](https://github.com/alisson-anjos/YuE-Interface).
+To use a **GUI/Gradio** interface, check out:  
+- [YuEGP](https://github.com/deepbeepmeep/YuEGP)  
+- [YuE-exllamav2](https://github.com/sgsdxzy/YuE-exllamav2)  
+- [YuE-Interface](https://github.com/alisson-anjos/YuE-Interface)  
 
-**Windows Users:** 
-
-1 click installer use [pinokio](https://pinokio.computer). To use Gradio with Docker see [YuE-for-windows](https://github.com/sdbds/YuE-for-windows).
+### 🪟 Windows Users  
+- For a **one-click installer**, use [Pinokio](https://pinokio.computer).  
+- To use **Gradio with Docker**, see: [YuE-for-Windows](https://github.com/sdbds/YuE-for-windows)  
 
 ### 1. Install environment and dependencies
 Make sure properly install flash attention 2 to reduce VRAM usage. 
