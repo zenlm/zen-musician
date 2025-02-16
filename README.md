@@ -221,7 +221,7 @@ The prompt consists of three parts: genre tags, lyrics, and ref audio.
 
 5. We find that [intro] label is less stable, so we recommend starting with [verse] or [chorus].
 
-6. For generating music with no vocal, see [issue 18](https://github.com/multimodal-art-projection/YuE/issues/18).
+6. For generating music with no vocal (instrumental only), see [issue 18](https://github.com/multimodal-art-projection/YuE/issues/18).
 
 
 ### Audio Prompt
