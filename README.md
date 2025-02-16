@@ -234,6 +234,8 @@ The prompt consists of three parts: genre tags, lyrics, and ref audio.
 
 4. Around 30s audio is recommended for ICL.
 
+5. For music continuation, see [YuE-extend by Mozer](https://github.com/Mozer/YuE-extend). Also supports Colab.
+
 ---
 
 ## License Agreement \& Disclaimer  
