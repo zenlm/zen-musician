@@ -20,7 +20,7 @@ YuE is a groundbreaking series of open-source foundation models designed for mus
 ## News and Updates
 * 📌 Join Us on Discord! [<img alt="join discord" src="https://img.shields.io/discord/842440537755353128?color=%237289da&logo=discord"/>](https://discord.gg/ssAyWMnMzu)
 
-* **2025.03.11 🫶** Now YuE supports incremental song generation!!! See [YuE-UI by joeljuvel](https://github.com/joeljuvel/YuE-UI). YuE-UI is a Gradio-based interface designed for an intuitive and creative workflow, supporting batch generation, easy selection, and seamless continuation. You can flexibly experiment with audio prompts and different model settings, visualize your progress on an interactive timeline, rewind actions, quickly preview audio outputs at stage 1 before committing to refinement, and fully save/load your sessions (JSON format). Optimized to run smoothly even on GPUs with just 8GB VRAM using quantized models.
+* **2025.03.11 🫶** Now YuE supports incremental song generation!!! See [YuE-UI by joeljuvel](https://github.com/joeljuvel/YuE-UI). YuE-UI is a Gradio-based interface supporting batch generation, output selection, and continuation. You can flexibly experiment with audio prompts and different model settings, visualize your progress on an interactive timeline, rewind actions, quickly preview audio outputs at stage 1 before committing to refinement, and fully save/load your sessions (JSON format). Optimized to run smoothly even on GPUs with just 8GB VRAM using quantized models.
 * **2025.02.17 🫶** Now YuE supports music continuation and Google Colab! See [YuE-extend by Mozer](https://github.com/Mozer/YuE-extend).
 * **2025.02.07 🎉** Get YuE for Windows on [pinokio](https://pinokio.computer).
 
