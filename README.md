@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-    <a href="https://map-yue.github.io/">Demo 🎶</a> &nbsp;|&nbsp; 📑 <a href="">Paper (coming soon)</a>
+    <a href="https://map-yue.github.io/">Demo 🎶</a> &nbsp;|&nbsp; 📑 <a href="https://arxiv.org/abs/2503.08638">Paper</a>
     <br>
     <a href="https://huggingface.co/m-a-p/YuE-s1-7B-anneal-en-cot">YuE-s1-7B-anneal-en-cot 🤗</a> &nbsp;|&nbsp; <a href="https://huggingface.co/m-a-p/YuE-s1-7B-anneal-en-icl">YuE-s1-7B-anneal-en-icl 🤗</a> &nbsp;|&nbsp; <a href="https://huggingface.co/m-a-p/YuE-s1-7B-anneal-jp-kr-cot">YuE-s1-7B-anneal-jp-kr-cot 🤗</a>
     <br>
@@ -20,6 +20,7 @@ YuE is a groundbreaking series of open-source foundation models designed for mus
 ## News and Updates
 * 📌 Join Us on Discord! [<img alt="join discord" src="https://img.shields.io/discord/842440537755353128?color=%237289da&logo=discord"/>](https://discord.gg/ssAyWMnMzu)
 
+* **2025.01.30 🔥 Paper Released**: We released [YuE technical report](https://arxiv.org/abs/2503.08638)!!! We discuss all the technical details, findings, and lessons learned. Enjoy~
 * **2025.03.11 🫶** Now YuE supports incremental song generation!!! See [YuE-UI by joeljuvel](https://github.com/joeljuvel/YuE-UI). YuE-UI is a Gradio-based interface supporting batch generation, output selection, and continuation. You can flexibly experiment with audio prompts and different model settings, visualize your progress on an interactive timeline, rewind actions, quickly preview audio outputs at stage 1 before committing to refinement, and fully save/load your sessions (JSON format). Optimized to run smoothly even on GPUs with just 8GB VRAM using quantized models.
 * **2025.02.17 🫶** Now YuE supports music continuation and Google Colab! See [YuE-extend by Mozer](https://github.com/Mozer/YuE-extend).
 * **2025.02.07 🎉** Get YuE for Windows on [pinokio](https://pinokio.computer).
@@ -269,6 +270,16 @@ We deeply appreciate all the support we received along the way. Long live open-s
 If you find our paper and code useful in your research, please consider giving a star :star: and citation :pencil: :)
 
 ```BibTeX
+@misc{yuan2025yuescalingopenfoundation,
+      title={YuE: Scaling Open Foundation Models for Long-Form Music Generation}, 
+      author={Ruibin Yuan and Hanfeng Lin and Shuyue Guo and Ge Zhang and Jiahao Pan and Yongyi Zang and Haohe Liu and Yiming Liang and Wenye Ma and Xingjian Du and Xinrun Du and Zhen Ye and Tianyu Zheng and Yinghao Ma and Minghao Liu and Zeyue Tian and Ziya Zhou and Liumeng Xue and Xingwei Qu and Yizhi Li and Shangda Wu and Tianhao Shen and Ziyang Ma and Jun Zhan and Chunhui Wang and Yatian Wang and Xiaowei Chi and Xinyue Zhang and Zhenzhu Yang and Xiangzhou Wang and Shansong Liu and Lingrui Mei and Peng Li and Junjie Wang and Jianwei Yu and Guojian Pang and Xu Li and Zihao Wang and Xiaohuan Zhou and Lijun Yu and Emmanouil Benetos and Yong Chen and Chenghua Lin and Xie Chen and Gus Xia and Zhaoxiang Zhang and Chao Zhang and Wenhu Chen and Xinyu Zhou and Xipeng Qiu and Roger Dannenberg and Jiaheng Liu and Jian Yang and Wenhao Huang and Wei Xue and Xu Tan and Yike Guo},
+      year={2025},
+      eprint={2503.08638},
+      archivePrefix={arXiv},
+      primaryClass={eess.AS},
+      url={https://arxiv.org/abs/2503.08638}, 
+}
+
 @misc{yuan2025yue,
   title={YuE: Open Music Foundation Models for Full-Song Generation},
   author={Ruibin Yuan and Hanfeng Lin and Shawn Guo and Ge Zhang and Jiahao Pan and Yongyi Zang and Haohe Liu and Xingjian Du and Xeron Du and Zhen Ye and Tianyu Zheng and Yinghao Ma and Minghao Liu and Lijun Yu and Zeyue Tian and Ziya Zhou and Liumeng Xue and Xingwei Qu and Yizhi Li and Tianhao Shen and Ziyang Ma and Shangda Wu and Jun Zhan and Chunhui Wang and Yatian Wang and Xiaohuan Zhou and Xiaowei Chi and Xinyue Zhang and Zhenzhu Yang and Yiming Liang and Xiangzhou Wang and Shansong Liu and Lingrui Mei and Peng Li and Yong Chen and Chenghua Lin and Xie Chen and Gus Xia and Zhaoxiang Zhang and Chao Zhang and Wenhu Chen and Xinyu Zhou and Xipeng Qiu and Roger Dannenberg and Jiaheng Liu and Jian Yang and Stephen Huang and Wei Xue and Xu Tan and Yike Guo}, 
