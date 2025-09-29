@@ -18,8 +18,8 @@ This model is based on [YuE by HKUST/M-A-P](https://github.com/multimodal-art-pr
 
 ## HuggingFace Models
 
-- **zen-musician**: Base model adapted from YuE-s1-7B (Coming soon)
-- **zen-musician-lora-***: Genre-specific LoRA adapters (Coming soon)
+- **[zenlm/zen-musician-7b](https://huggingface.co/zenlm/zen-musician-7b)**: Base model adapted from YuE-s1-7B
+- **zenlm/zen-musician-lora-***: Genre-specific LoRA adapters (Coming soon)
 
 ## Hardware Requirements
 
@@ -208,7 +208,15 @@ Zen Musician is released under the **Apache License 2.0**, inheriting from the o
 
 Built on [YuE by HKUST/M-A-P](https://github.com/multimodal-art-projection/YuE). We thank the original authors and all contributors to the open-source music generation community.
 
-Part of the **Zen AI** ecosystem - building frontier AI models for creativity and expression.
+Part of the **[Zen AI](https://github.com/zenlm)** ecosystem - building frontier AI models for creativity and expression.
+
+## Links
+
+- **GitHub**: https://github.com/zenlm/zen-musician
+- **HuggingFace**: https://huggingface.co/zenlm/zen-musician-7b
+- **Organization**: https://github.com/zenlm
+- **Zen Gym** (Training): https://github.com/zenlm/zen-gym
+- **Zen Engine** (Inference): https://github.com/zenlm/zen-engine
 
 ---
 
