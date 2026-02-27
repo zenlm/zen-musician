@@ -18,7 +18,7 @@ This model is based on [YuE by HKUST/M-A-P](https://github.com/multimodal-art-pr
 
 ## HuggingFace Models
 
-- **[zenlm/zen-musician-7b](https://huggingface.co/zenlm/zen-musician-7b)**: Base model adapted from YuE-s1-7B
+- **[zenlm/zen-musician-7b](https://huggingface.co/zenlm/zen-musician-7b)**: Based on Zen Musician 7B
 - **zenlm/zen-musician-lora-***: Genre-specific LoRA adapters (Coming soon)
 
 ## Hardware Requirements
@@ -62,7 +62,7 @@ git clone https://github.com/zenlm/zen-musician.git
 cd zen-musician/inference/
 
 # Download tokenizer
-git clone https://huggingface.co/m-a-p/xcodec_mini_infer
+git clone https://huggingface.co/zenlm/zen-musician-codec
 ```
 
 ## Usage
@@ -73,8 +73,8 @@ git clone https://huggingface.co/m-a-p/xcodec_mini_infer
 cd inference/
 python infer.py \
     --cuda_idx 0 \
-    --stage1_model m-a-p/YuE-s1-7B-anneal-en-cot \
-    --stage2_model m-a-p/YuE-s2-1B-general \
+    --stage1_model zenlm/zen-musician-s1-7b \
+    --stage2_model zenlm/zen-musician-s2-1b \
     --genre_txt ../prompt_egs/genre.txt \
     --lyrics_txt ../prompt_egs/lyrics.txt \
     --run_n_segments 2 \
@@ -91,7 +91,7 @@ cd inference/
 python infer.py \
     --cuda_idx 0 \
     --stage1_model m-a-p/YuE-s1-7B-anneal-en-icl \
-    --stage2_model m-a-p/YuE-s2-1B-general \
+    --stage2_model zenlm/zen-musician-s2-1b \
     --genre_txt ../prompt_egs/genre.txt \
     --lyrics_txt ../prompt_egs/lyrics.txt \
     --run_n_segments 2 \
@@ -113,7 +113,7 @@ cd inference/
 python infer.py \
     --cuda_idx 0 \
     --stage1_model m-a-p/YuE-s1-7B-anneal-en-icl \
-    --stage2_model m-a-p/YuE-s2-1B-general \
+    --stage2_model zenlm/zen-musician-s2-1b \
     --genre_txt ../prompt_egs/genre.txt \
     --lyrics_txt ../prompt_egs/lyrics.txt \
     --run_n_segments 2 \
