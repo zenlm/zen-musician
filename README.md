@@ -1,10 +1,10 @@
 # Zen Musician
 
-**Zen Musician** is a music generation foundation model based on YuE, adapted and enhanced for the Zen AI ecosystem. It transforms lyrics into full songs with both vocal and accompaniment tracks, supporting diverse genres, languages, and vocal techniques.
+**Zen Musician** is a music generation foundation model that transforms lyrics into full songs with both vocal and accompaniment tracks, supporting diverse genres, languages, and vocal techniques.
 
 ## About
 
-Zen Musician is built on the groundbreaking YuE (乐) architecture and enhanced through LoRA finetuning to expand its capabilities across multiple genres and musical styles. The model can generate complete songs lasting several minutes, with support for:
+Zen Musician uses a two-stage transformer architecture enhanced through LoRA finetuning to expand its capabilities across multiple genres and musical styles. The model can generate complete songs lasting several minutes, with support for:
 
 - Multiple languages (English, Chinese, Japanese, Korean, Cantonese)
 - Diverse musical genres
@@ -12,13 +12,9 @@ Zen Musician is built on the groundbreaking YuE (乐) architecture and enhanced 
 - In-context learning (ICL) for style transfer
 - Music continuation and incremental generation
 
-## Credits
-
-This model is based on [YuE by HKUST/M-A-P](https://github.com/multimodal-art-projection/YuE), licensed under Apache 2.0. We thank the original authors for their groundbreaking work in open-source music generation.
-
 ## HuggingFace Models
 
-- **[zenlm/zen-musician-7b](https://huggingface.co/zenlm/zen-musician-7b)**: Based on Zen Musician 7B
+- **[zenlm/zen-musician-7b](https://huggingface.co/zenlm/zen-musician-7b)**: Zen Musician 7B
 - **zenlm/zen-musician-lora-***: Genre-specific LoRA adapters (Coming soon)
 
 ## Hardware Requirements
@@ -90,7 +86,7 @@ python infer.py \
 cd inference/
 python infer.py \
     --cuda_idx 0 \
-    --stage1_model m-a-p/YuE-s1-7B-anneal-en-icl \
+    --stage1_model zenlm/zen-musician-s1-7b-icl \
     --stage2_model zenlm/zen-musician-s2-1b \
     --genre_txt ../prompt_egs/genre.txt \
     --lyrics_txt ../prompt_egs/lyrics.txt \
@@ -112,7 +108,7 @@ python infer.py \
 cd inference/
 python infer.py \
     --cuda_idx 0 \
-    --stage1_model m-a-p/YuE-s1-7B-anneal-en-icl \
+    --stage1_model zenlm/zen-musician-s1-7b-icl \
     --stage2_model zenlm/zen-musician-s2-1b \
     --genre_txt ../prompt_egs/genre.txt \
     --lyrics_txt ../prompt_egs/lyrics.txt \
@@ -162,14 +158,7 @@ cd finetune/
 ## Windows Users
 
 - **One-click installer**: [Pinokio](https://pinokio.computer)
-- **Docker/Gradio**: [YuE-for-Windows](https://github.com/sdbds/YuE-for-windows)
-
-## GUI Interfaces
-
-- [YuE-UI by joeljuvel](https://github.com/joeljuvel/YuE-UI) - Batch generation, timeline, save/load
-- [YuE-extend by Mozer](https://github.com/Mozer/YuE-extend) - Music continuation + Colab
-- [YuE-exllamav2-UI](https://github.com/WrongProtocol/YuE-exllamav2-UI)
-- [YuEGP](https://github.com/deepbeepmeep/YuEGP)
+- **Docker/Gradio**: One-click installer via [Pinokio](https://pinokio.computer)
 
 ## Roadmap
 
@@ -183,32 +172,10 @@ cd finetune/
 
 ## License
 
-Zen Musician is released under the **Apache License 2.0**, inheriting from the original YuE project.
+Zen Musician is released under the **Apache License 2.0**.
 
-### Attribution
-- When using this model, please credit: "Zen Musician (based on YuE by HKUST/M-A-P)"
 - We encourage commercial use while maintaining proper attribution
 - Label AI-generated content as "AI-generated" or "AI-assisted"
-
-### Original YuE Citation
-
-```bibtex
-@misc{yuan2025yuescalingopenfoundation,
-      title={YuE: Scaling Open Foundation Models for Long-Form Music Generation},
-      author={Ruibin Yuan and Hanfeng Lin and Shuyue Guo and Ge Zhang and Jiahao Pan and Yongyi Zang and Haohe Liu and Yiming Liang and Wenye Ma and Xingjian Du and Xinrun Du and Zhen Ye and Tianyu Zheng and Zhengxuan Jiang and Yinghao Ma and Minghao Liu and Zeyue Tian and Ziya Zhou and Liumeng Xue and Xingwei Qu and Yizhi Li and Shangda Wu and Tianhao Shen and Ziyang Ma and Jun Zhan and Chunhui Wang and Yatian Wang and Xiaowei Chi and Xinyue Zhang and Zhenzhu Yang and Xiangzhou Wang and Shansong Liu and Lingrui Mei and Peng Li and Junjie Wang and Jianwei Yu and Guojian Pang and Xu Li and Zihao Wang and Xiaohuan Zhou and Lijun Yu and Emmanouil Benetos and Yong Chen and Chenghua Lin and Xie Chen and Gus Xia and Zhaoxiang Zhang and Chao Zhang and Wenhu Chen and Xinyu Zhou and Xipeng Qiu and Roger Dannenberg and Jiaheng Liu and Jian Yang and Wenhao Huang and Wei Xue and Xu Tan and Yike Guo},
-      year={2025},
-      eprint={2503.08638},
-      archivePrefix={arXiv},
-      primaryClass={eess.AS},
-      url={https://arxiv.org/abs/2503.08638},
-}
-```
-
-## Acknowledgements
-
-Built on [YuE by HKUST/M-A-P](https://github.com/multimodal-art-projection/YuE). We thank the original authors and all contributors to the open-source music generation community.
-
-Part of the **[Zen AI](https://github.com/zenlm)** ecosystem - building frontier AI models for creativity and expression.
 
 ## Links
 
@@ -221,38 +188,3 @@ Part of the **[Zen AI](https://github.com/zenlm)** ecosystem - building frontier
 ---
 
 **Zen Musician** - Transforming lyrics into music with AI
----
-
-## Based On
-
-**zen-musician** is based on [YuE 7B](https://github.com/multimodal-art-projection/YuE)
-
-We are grateful to the original authors for their excellent work and open-source contributions.
-
-### Upstream Source
-- **Repository**: https://github.com/multimodal-art-projection/YuE
-- **Base Model**: YuE 7B
-- **License**: See original repository for license details
-
-### Changes in Zen LM
-- Adapted for Zen AI ecosystem
-- Fine-tuned for specific use cases
-- Added training and inference scripts
-- Integrated with Zen Gym and Zen Engine
-- Enhanced documentation and examples
-
-### Citation
-
-If you use this model, please cite both the original work and Zen LM:
-
-```bibtex
-@misc{zenlm2025zen-musician,
-    title={Zen LM: zen-musician},
-    author={Hanzo AI and Zoo Labs Foundation},
-    year={2025},
-    publisher={HuggingFace},
-    howpublished={\url{https://huggingface.co/zenlm/zen-musician}}
-}
-```
-
-Please also cite the original upstream work - see https://github.com/multimodal-art-projection/YuE for citation details.
