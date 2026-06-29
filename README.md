@@ -1,3 +1,5 @@
+<p align="center"><img src=".github/hero.svg" alt="zen-musician" width="880"></p>
+
 # Zen Musician
 
 **Zen Musician** is a music generation foundation model that transforms lyrics into full songs with both vocal and accompaniment tracks, supporting diverse genres, languages, and vocal techniques.
