@@ -2,11 +2,13 @@
 
 # Zen Musician
 
-**Zen Musician** is a music generation foundation model that transforms lyrics into full songs with both vocal and accompaniment tracks, supporting diverse genres, languages, and vocal techniques.
+**Zen Musician** is a lyrics-to-song music generation model that transforms lyrics into full songs with both vocal and accompaniment tracks, supporting diverse genres, languages, and vocal techniques.
+
+Derived from [m-a-p/YuE-s1-7B-anneal-en-cot](https://huggingface.co/m-a-p/YuE-s1-7B-anneal-en-cot) (Apache-2.0) by the [M-A-P](https://github.com/multimodal-art-projection/YuE) team; repackaged by Zen. No weights were trained from scratch by Zen.
 
 ## About
 
-Zen Musician uses a two-stage transformer architecture enhanced through LoRA finetuning to expand its capabilities across multiple genres and musical styles. The model can generate complete songs lasting several minutes, with support for:
+Zen Musician builds on YuE's two-stage transformer architecture (stage-1 7B + stage-2 1B), with LoRA finetuning to expand its capabilities across multiple genres and musical styles. The model can generate complete songs lasting several minutes, with support for:
 
 - Multiple languages (English, Chinese, Japanese, Korean, Cantonese)
 - Diverse musical genres
@@ -172,9 +174,11 @@ cd finetune/
 - [ ] Stem generation mode
 - [ ] Additional genre training
 
-## License
+## License & Attribution
 
 Zen Musician is released under the **Apache License 2.0**.
+
+This is a derivative of [YuE](https://github.com/multimodal-art-projection/YuE) — specifically [m-a-p/YuE-s1-7B-anneal-en-cot](https://huggingface.co/m-a-p/YuE-s1-7B-anneal-en-cot) (stage-1, 7B) and [m-a-p/YuE-s2-1B-general](https://huggingface.co/m-a-p/YuE-s2-1B-general) (stage-2, 1B) — developed by the M-A-P team (Ruibin Yuan and core contributors from M-A-P and HKUST), released under the Apache License 2.0. All rights and attribution for the underlying models belong to the original authors. See the [NOTICE](NOTICE) file.
 
 - We encourage commercial use while maintaining proper attribution
 - Label AI-generated content as "AI-generated" or "AI-assisted"
